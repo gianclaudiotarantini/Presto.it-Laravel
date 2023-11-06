@@ -1,0 +1,30 @@
+:root{
+    --main-color: #06145a;
+    --second-color: #eb6841;
+    --third-color: #c51926;
+    --shadow-color:  #bcbcbc;
+  }
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+.nav_color{
+    background: var(--main-color);
+    width: 75%;
+    margin: auto;
+}
+
+.bold:hover{
+    font-weight: bold;
+}
+
+.position_sticky{
+    position: sticky;
+    top: 0;
+  }

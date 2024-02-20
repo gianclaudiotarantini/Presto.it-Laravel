@@ -1,7 +1,7 @@
 <div class="col">
   <div class="card background_white shadow_color">
     
-    <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400, 400) : '\img\no-image_2.jpg'}}" class="card-img-top " alt="immagine">
+    <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl() : '\img\no-image_2.jpg'}}" class="card-img-top " alt="immagine">
     <div class="card-body ">
       <h5 class="card-title">{{$article['title']}}</h5>
       <div class="d-flex justify-content-between mb-2">

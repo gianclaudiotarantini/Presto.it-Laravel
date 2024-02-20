@@ -96,8 +96,8 @@ class ArticleEditForm extends Component
         $this->article->setAccepted(null);
         $this->images=[];
         // session()->flash('article', 'Articolo modificato con successo');
-        return redirect(route('article.edit',['article'=>$this->article]))->with('article', 'Articolo modificato con successo');
-        
+        return redirect(route('user.index',['article'=>$this->article]))->with('article', 'Articolo modificato con successo');
+  
         
     }
     

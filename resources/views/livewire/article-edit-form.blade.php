@@ -51,7 +51,7 @@
                     <div class="row">
                         @foreach ($oldImages as $key => $oldImage)
                         <div class="col my-3">
-                            <div class="mx-auto rounded img-preview" style="background-image: url({{$oldImage->getUrl()}})"></div>
+                            <div class="mx-auto rounded img-preview" style="background-image: url({{$oldImage->getUrl(400,300)}})"></div>
                             <button type="button" class="btn btn_orange" wire:click="removeOldImages({{$key}})">Cancella</button>
                         </div>
                         @endforeach

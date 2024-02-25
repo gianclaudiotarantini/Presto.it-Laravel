@@ -27,10 +27,10 @@ class ResizeImage implements ShouldQueue
 
      
 
-    public function __construct($filePach, $w, $h)
+    public function __construct($filePath, $w, $h)
     {
-        $this->path = dirname($filePach);
-        $this->fileName = basename($filePach);
+        $this->path = dirname($filePath);
+        $this->fileName = basename($filePath);
         $this->w = $w;
         $this->h = $h;
 

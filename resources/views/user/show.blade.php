@@ -43,7 +43,7 @@
                                 <div class="row g-0">
                                     <div class="col-md-4">
                                         <a href="{{ route('article.show', ['article' => $article]) }}">
-                                            <img src="{{ $article->images()->get()->isEmpty()? '\img\no-image_2.jpg': $article->images()->first()->getUrl(400, 400) }}"
+                                            <img src="{{ $article->images()->get()->isEmpty()? '\img\no-image_2.jpg': $article->images()->first()->getUrl(400,300) }}"
                                             class="img-fluid rounded-start" alt="article-photo">
                                         </a>
                                     </div>

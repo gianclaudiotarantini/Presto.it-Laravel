@@ -20,7 +20,8 @@
                 @foreach ($article->images as $image)
                 <div class="carousel-item @if ($loop->first) active @endif container">
                     <div class="row">
-                        <div class="col-6"><img src="{{$image->getUrl(400, 400)}}" class="d-block w-100 rounded" alt="Immagine3"></div>
+                        <div class="col-6">
+                            <img src="{{$image->getUrl(400,300)}}" class="d-block w-100 rounded" alt="Immagine3"></div>
                         <div class="col-6">
                             <div class="row">
                                 {{-- controllo --}}

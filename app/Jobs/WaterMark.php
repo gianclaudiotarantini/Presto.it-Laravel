@@ -37,18 +37,18 @@ class WaterMark implements ShouldQueue
             return;
         }
         $temp = explode('/', $i->path);
-        $temp[2]='crop_400x400_' . $temp[2];
+        $temp[2]='crop_400x300_' . $temp[2];
         $path = implode('/', $temp);
         $srcPath = storage_path('app/public/' . $path);
         $image = file_get_contents($srcPath);
         $image = SpatieImage::load($srcPath);
 
         $image->watermark(base_path('resources/img/Presto.it_watermarks.png'))
-            ->watermarkOpacity(30)
+            ->watermarkOpacity(60)
             ->watermarkPosition(Manipulations::POSITION_CENTER)
             ->watermarkPadding(10, 10, Manipulations::UNIT_PERCENT)
-            ->watermarkHeight(50, Manipulations::UNIT_PERCENT)
-            ->watermarkWidth(50, Manipulations::UNIT_PERCENT);
+            ->watermarkHeight(100, Manipulations::UNIT_PERCENT)
+            ->watermarkWidth(100, Manipulations::UNIT_PERCENT);
 
         $image->save();
     }

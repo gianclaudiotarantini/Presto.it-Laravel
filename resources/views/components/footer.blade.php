@@ -7,7 +7,7 @@
                     <li style="list-style-type: none">
                         @auth
                         @if (Auth::user()->is_revisor)
-                        <a href="{{route('revisor.list')}}">Revisiona articoli</a>
+                        <a href="{{route('revisor.list')}}">{{__('ui.revisionaArticoli')}}</a>
                         @else
                         <a href="{{ route('revisor.form') }}">Lavora con noi</a>
                         @endif
@@ -15,24 +15,24 @@
                         <a href="{{ route('revisor.form') }}">Lavora con noi</a>
                         @endauth
                     </li>
-                    <li style="list-style-type: none"><a href="{{route('article.index')}}">Guarda gli annunci</a></li>
-                    <li style="list-style-type: none"><a href="{{route('category.index')}}">Guarda le categorie</a></li>
+                    <li style="list-style-type: none"><a href="{{route('article.index')}}">{{__('ui.guardaAnnunci')}}</a></li>
+                    <li style="list-style-type: none"><a href="{{route('category.index')}}">{{__('ui.guardaCategorie')}}</a></li>
                 </ul>
             </div>
             <div class="col-3">
-                <h5 class="text-center mt-2">Profilo</h5>
+                <h5 class="text-center mt-2">{{__('ui.profilo')}}</h5>
                 <ul class="list-group list-group-flush text-center">
-                    <li style="list-style-type: none"><a href="{{route('article.create')}}">Inserisci annuncio</a></li>
-                    <li style="list-style-type: none"><a href="{{route('user.index')}}">Controlla i tuoi annunci</a></li>
+                    <li style="list-style-type: none"><a href="{{route('article.create')}}">{{__('ui.inserisciAnnuncio')}}</a></li>
+                    <li style="list-style-type: none"><a href="{{route('user.index')}}">{{__('ui.ControllaAnnunci')}}</a></li>
                     @if (Auth::user())
-                    <li style="list-style-type: none"><a href="{{route('user.show',['user'=>Auth::user()])}}">Guarda il tuo profilo</a></li> 
+                    <li style="list-style-type: none"><a href="{{route('user.show',['user'=>Auth::user()])}}">{{__('ui.guardaProfilo')}}</a></li> 
                     @else
                     <li style="list-style-type: none"><a href="{{route('login')}}">Entra su Presto</a></li>
                     @endif
                 </ul>
             </div>
             <div class="col-3">
-                <h5 class="text-center mt-2">Contattaci</h5>
+                <h5 class="text-center mt-2">{{__('ui.contattaci')}}</h5>
                 <ul class="list-group list-group-flush text-center">
                     <li style="list-style-type: none"><a href="https://www.linkedin.com/in/marco-signorile/" target="_blank"><i class="fa-brands fa-linkedin"></i> Signorile Marco</a></li>
                     <li style="list-style-type: none"><a href="https://www.linkedin.com/in/gianclaudio-tarantini/" target="_blank"><i class="fa-brands fa-linkedin"></i> Tarantini Gianclaudio</a></li>

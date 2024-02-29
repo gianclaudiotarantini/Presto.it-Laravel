@@ -1,5 +1,5 @@
 <x-main>
-    <h1 class="text-center mt-5 ">Accedi</h1>
+    <h1 class="text-center mt-5 ">{{__('ui.accedilogin')}}</h1>
     <div class="p-5 container mt-5 shadow_color w-75 text-center">
         <form action="{{route('login')}}" method="POST">
             @method('POST')
